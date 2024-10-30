@@ -1,0 +1,32 @@
+<div class="slideshow-container" [attr.aria-live]="ariaLive">
+  <div class="mySlides fade" #slide *ngFor="let image of images; let i = index"
+       (mouseenter)="pauseSlideshow()"
+       (mouseleave)="resumeSlideshow()">
+    <img [src]="image.src" [alt]="image.alt" style="width: 100%; height: 400px;">
+  </div>
+
+  <button (click)="previousSlide()" class="nav-button" [disabled]="isFirstSlide()">
+    Previous
+  </button>
+  <button (click)="nextSlide()" class="nav-button" [disabled]="isLastSlide()">
+    Next
+  </button>
+
+  <div style="text-align:center">
+    <span 
+      class="dot" 
+      *ngFor="let image of images; let i = index" 
+      (click)="currentSlide(i + 1)"
+      (keydown)="onDotKeyDown($event, i + 1)"
+      tabindex="0"
+      role="button"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+    ></span> 
+  </div>
+
+  <button (click)="togglePlayPause()" 
+    class="play-pause-button"
+    [attr.aria-pressed]="isPlaying ? 'true' : 'false'">
+    {{ isPlaying ? 'Pause' : 'Play' }}
+  </button>
+</div>

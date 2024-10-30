@@ -1,0 +1,66 @@
+.mySlides {
+  display: none; /* Hidden by default */
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.slideshow-container {
+  position: relative; /* This allows absolutely positioned children */
+}
+
+.play-pause-button {
+  position: absolute; /* Position the button absolutely */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+  padding: 10px 15px; /* Padding around the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.play-pause-button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-button:disabled {
+  background-color: rgba(128, 128, 128, 0.5); /* Grey background for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+.nav-button:first-of-type {
+  left: 10px; /* Position the previous button on the left */
+}
+
+.nav-button:last-of-type {
+  right: 10px; /* Position the next button on the right */
+}
+
+
